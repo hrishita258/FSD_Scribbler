@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="../styles/post.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/font.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <script src="../scripts/post.js"></script>
+
+    <style>
+        .newClass {
+            border: thick solid plum ;
+            resize: none;
+
+            
+        }
+
+        [contenteditable] {
+  outline: 0px solid transparent;
+}
+
+        .titleClass {
+            border: thin solid pink;
+            resize: none;
+        }
+    </style>
+
+</head>
+
+<body class="body">
+    <div class="">
+        <!-- <input class="topButtons" type="button" value="Sign Up"> -->
+        <div class="d-flex justify-content-between">
+            <div> <a id="pageTitle" style="width: 50px" class="logo-title ">ScriBBler</a>
+                <p class="middleText ">Explore, Imagine, Create</p>
+            </div>
+            <div class="d-flex">
+                <div class="m-3">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signIn">
+                        Sign In
+                    </button>
+                </div>
+                <div class="m-3">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signUp">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+
+            <!--  -->
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="signUp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title w-100 text-center
+              id=" staticBackdropLabel">
+                        Get Started
+                    </h3>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="hh" class="form-group">
+                        <h6>Full Name</h6>
+                        <input type="text" class="form-control" placeholder="Enter Full Name" required />
+                        <br />
+
+                        <h6>Username</h6>
+                        <input type="text" class="form-control" placeholder="Enter Username" required />
+                        <br />
+
+                        <h6>Password</h6>
+                        <input type="password" class="form-control" placeholder="Enter Password" required />
+                        <br />
+
+                        <h6>Confirm Password</h6>
+                        <input type="password" class="form-control" placeholder="Confirm Password" required />
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" form="hh">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="modal fade" id="signIn" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title w-100" id="staticBackdropLabel" style="text-align: center;">
+                        Welcome Back
+                    </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <h6>Username</h6>
+                        <input type="text" class="form-control" placeholder="Enter Username" required />
+                        <br />
+
+                        <h6>Password</h6>
+                        <input type="password" class="form-control" placeholder="Enter Password" required />
+                    </form>
+                </div>
+                <div class="modal-footer d-inline">
+                    <button type="submit" class="btn btn-success" form="hh">
+                        Sign In
+                    </button>
+                    <div class="text-center">
+                        <div class="text-bold"><b>Not a member?</b> <button data-bs-toggle="modal"
+                                data-bs-target="#signUp" style="width: 100px" class="btn btn-link">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+    <div class="text-center">
+        <span class="h2" id="titleEdit">JavaScript</span>
+    </div>
+    <br>
+    <br>
+    <div class="d-flex justify-content-between">
+        
+            <div >
+                <span  class="h4"> JavaScript</span>
+            </div>
+            <div>
+                <input type="button" id="editToSave" class="btn btn-danger" onclick="editable()" value="Edit"></input>
+            </div>
+            </div>
+        <br>
+            <div id="contentEdit" >
+                <p>The flowers of most species have five petals, with the exception of Rosa sericea, which usually has only four.
+                    Each
+                    petal is divided into two distinct lobes and is usually white or pink, though in a few species yellow or red.
+                    Beneath
+                    the petals are five sepals (or in the case of some Rosa sericea, four). These may be long enough to be visible
+                    when
+                    viewed from above and appear as green points alternating with the rounded petals. There are multiple superior
+                    ovaries
+                    that develop into achenes.[3] Roses are insect-pollinated in nature.
+                    The aggregate fruit of the rose is a berry-like structure called a rose hip. Many of the domestic cultivars do
+                    not
+                    produce hips, as the flowers are so tightly petalled that they do not provide access for pollination. The hips
+                    of most
+                    species are red, but a few (e.g. Rosa pimpinellifolia) have dark purple to black hips. Each hip comprises an
+                    outer
+                    fleshy layer, the hypanthium, which contains 5–160 "seeds" (technically dry single-seeded fruits called achenes)
+                    embedded in a matrix of fine, but stiff, hairs. Rose hips of some species, especially the dog rose (Rosa canina)
+                    and
+                    rugosa rose (Rosa rugosa), are very rich in vitamin C, among the richest sources of any plant. The hips are
+                    eaten by
+                    fruit-eating birds such as thrushes and waxwings, which then disperse the seeds in their droppings. Some birds,
+                    particularly finches, also eat the seeds.</p>
+            </div>
+            <br>
+           <div >
+            <input type="button" class="btn btn-danger " style="width: 70px;" id="like" onclick="likeBtn()" value="Like"></input>
+           </div>
+           <br>
+           <!-- <input style="border: none; width: 250px; outline: 0px transparent;" value="Be the first one to like this!" type="text" id="liked" readonly></input> -->
+           <p id="liked">Be the first one to like this!</p>
+           
+           <br>
+           <textarea id="commentVal" placeholder="Leave a comment..." style="width: 550px; height: 100px;"></textarea>
+           <br>
+           <button onclick="commentBtn()" class="btn btn-danger" style="width: 100px;">Comment</button>
+           <br>
+           <br>
+           <div>
+               <h5>All Comments</h5>
+           </div>
+
+           <div class="container" >
+           <div class="row py-4" id="commentContainer" style="background-color: lightgray; height: 250px; ">
+                <div class="col-md-12">
+                    <div class="card " id="commentCard">
+                        <div class="card-body">
+                            <span class="card-title">
+                                HH
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="card ">
+                        <div class="card-body">
+                            <span class="card-title">
+                                HH
+                            </span>
+                        </div>
+                    </div>
+                </div>
+               </div>
+           </div>
+   
+ 
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                    crossorigin="anonymous"></script>
+</body>
+
+</html>
